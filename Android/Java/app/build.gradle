@@ -40,6 +40,7 @@ dependencies {
     implementation libs.navigation.ui
 
 
-    implementation libs.bom
-    implementation libs.android.core
+    // Import the BOM
+    implementation(platform("com.choicely.sdk:bom:1.0.3"))
+    implementation("com.choicely.sdk:android-core")
 }

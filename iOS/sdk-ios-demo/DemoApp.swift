@@ -12,6 +12,8 @@ import ChoicelyCore
 struct DemoApp: App {
     
     init() {
+        
+        ChoicelySDK.settings.externalViewControllerFactory = YourCustomViewControllerFactory()
         ChoicelySDK.initialize(
             application: UIApplication.shared,
             appKey: "Y2hvaWNlbHktZXUvYXBwcy9kS1lHUUtUbWREa1pRb1ltZFRiZQ"

@@ -1,0 +1,51 @@
+{
+  "originHash" : "fd887027015032fbe75643d8faac0e5464e693f3290b2c984b8e694e8f0be3e5",
+  "pins" : [
+    {
+      "identity" : "choicely-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/choicely/choicely-sdk-ios",
+      "state" : {
+        "revision" : "58d964ce999afad0c9b94a8a0ef85bc2fa3fafcb",
+        "version" : "0.9.0"
+      }
+    },
+    {
+      "identity" : "dtcoretext",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:Cocoanetics/DTCoreText.git",
+      "state" : {
+        "revision" : "c0fe041c87c773321785d68a10c63c29a9c763e8",
+        "version" : "1.6.28"
+      }
+    },
+    {
+      "identity" : "dtfoundation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Cocoanetics/DTFoundation.git",
+      "state" : {
+        "revision" : "a61be65dd7d5b2cde3acabd13bf320b71f2907a5",
+        "version" : "1.7.19"
+      }
+    },
+    {
+      "identity" : "flexlayout",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:layoutBox/FlexLayout.git",
+      "state" : {
+        "revision" : "45b4e7cbcc9f35c05112860f4eb897aae4f5011c",
+        "version" : "2.2.2"
+      }
+    },
+    {
+      "identity" : "yoga",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/facebook/yoga.git",
+      "state" : {
+        "revision" : "042f5013152eb81c1552dec945b88f7b95ca350f",
+        "version" : "3.2.1"
+      }
+    }
+  ],
+  "version" : 3
+}

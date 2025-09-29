@@ -41,6 +41,6 @@ dependencies {
 
 
     // Import the BOM
-    implementation(platform("com.choicely.sdk:bom:1.0.3"))
+    implementation(platform("com.choicely.sdk:bom:1.0.5"))
     implementation("com.choicely.sdk:android-core")
 }

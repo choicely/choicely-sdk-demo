@@ -3,8 +3,8 @@ package com.choicely.sdk.demo;
 import android.app.Application;
 
 import com.choicely.sdk.ChoicelySDK;
-import com.choicely.sdk.demo.factory.AppContentFactory;
-import com.choicely.sdk.demo.factory.AppSplashFactory;
+import com.choicely.sdk.demo.factory.MyContentFactory;
+import com.choicely.sdk.demo.factory.MySplashFactory;
 
 
 public class MyApplication extends Application {
@@ -13,12 +13,12 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        ChoicelySDK.init(this);
+        ChoicelySDK.init(this, "Y2hvaWNlbHktZXUvYXBwcy9kS1lHUUtUbWREa1pRb1ltZFRiZQ");
 //        //for a custom content
-        ChoicelySDK.factory().setContentFactory(new AppContentFactory());
+        ChoicelySDK.factory().setContentFactory(new MyContentFactory());
 
 //        //For a custom splash screen.
-        ChoicelySDK.factory().setSplashFactory(new AppSplashFactory());
+        ChoicelySDK.factory().setSplashFactory(new MySplashFactory());
 
 
     }

@@ -77,25 +77,15 @@ Add the following to your app-level `build.gradle` file inside the `dependencies
 **Java:**
 
 ```groovy
-implementation platform("com.choicely.sdk:bom:1.0.3")
+implementation platform("com.choicely.sdk:bom:1.0.5")
 implementation "com.choicely.sdk:android-core"
 ```
 
 **Kotlin:**
 
 ```groovy
-implementation(platform("com.choicely.sdk:bom:1.0.3"))
+implementation(platform("com.choicely.sdk:bom:1.0.5"))
 implementation("com.choicely.sdk:android-core")
-```
-
-## 5. Add App Key and Other Config
-
-Add your app key in `res/values/strings.xml`:
-
-```xml
-<resources>
-    <string name="choicely_app_key" translatable="false">{App Key}</string>
-</resources>
 ```
 
 > **Note:**
@@ -118,7 +108,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        ChoicelySDK.init(this);
+        ChoicelySDK.init(this,"Y2hvaWNlbHktZXUvYXBwcy9kS1lHUUtUbWREa1pRb1ltZFRiZQ");
     }
 }
 ```
@@ -129,7 +119,7 @@ public class MyApplication extends Application {
 class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
-        ChoicelySDK.init(this)
+        ChoicelySDK.init(this,"Y2hvaWNlbHktZXUvYXBwcy9kS1lHUUtUbWREa1pRb1ltZFRiZQ")
     }
 }
 ```
@@ -145,113 +135,3 @@ class MyApplication : Application() {
 </application>
 ```
 
-> **Note:** Make sure no launcher activity is enabled.
-
-> **Note:** For real-time updates, you need to integrate the Firebase SDKs.
-
-Our SDK allows you to create custom screens and embed Choicely content (articles, surveys, etc.) alongside your own UI logic.
-
-## 7. Steps to Add a Custom Screen
-
-### 7.1 Create a Custom Fragment
-
-Create a fragment that extends `ChoicelyContentFragment`.
-
-**Java:**
-
-```java
-public class MyCustomScreen extends ChoicelyContentFragment {
-    ChoicelyTextView textView;
-    EditText editText;
-    Button button;
-    FrameLayout articleContainer;
-    FrameLayout surveyContainer;
-
-    @Override
-    protected int getLayout() {
-        return R.layout.fragment_custom_screen;
-    }
-
-    @Override
-    protected void onLayoutCreated(@NonNull View layout, @Nullable Bundle savedInstanceState) {
-        textView = layout.findViewById(R.id.textView);
-        editText = layout.findViewById(R.id.edittext);
-        button = layout.findViewById(R.id.toastButton);
-        articleContainer = layout.findViewById(R.id.article_container);
-        surveyContainer = layout.findViewById(R.id.survey_Container);
-    }
-
-    @Override
-    protected void updateContent(@NonNull ChoicelyScreenActivity act, @NonNull Bundle data) {
-        setArticle();
-        setSurvey();
-    }
-
-    private void setSurvey() {
-        Bundle bundle = new Bundle();
-        bundle.putString(ChoicelyIntentKeys.KEY, "SURVEY_KEY");
-        ChoicelySurveyFragment surveyFragment = new ChoicelySurveyFragment();
-        surveyFragment.setArguments(bundle);
-
-        replaceFragment(surveyContainer.getId(), surveyFragment, false);
-    }
-
-    private void setArticle() {
-        Bundle bundle = new Bundle();
-        bundle.putString(ChoicelyIntentKeys.ARTICLE_KEY, "ARTICLE_KEY");
-        ChoicelyArticleFragment articleFragment = new ChoicelyArticleFragment();
-        articleFragment.setArguments(bundle);
-
-        replaceFragment(articleContainer.getId(), articleFragment, false);
-    }
-}
-```
-
-**Kotlin:**
-
-```kotlin
-class MyCustomScreen : ChoicelyContentFragment() {
-    private var textView: ChoicelyTextView? = null
-    private var editText: EditText? = null
-    private var button: Button? = null
-    private var articleContainer: FrameLayout? = null
-    private var surveyContainer: FrameLayout? = null
-
-    override fun getLayout(): Int = R.layout.fragment_custom_screen
-
-    override fun onLayoutCreated(layout: View, savedInstanceState: Bundle?) {
-        textView = layout.findViewById(R.id.textView)
-        editText = layout.findViewById(R.id.edittext)
-        button = layout.findViewById(R.id.toastButton)
-        articleContainer = layout.findViewById(R.id.article_container)
-        surveyContainer = layout.findViewById(R.id.survey_Container)
-    }
-
-    override fun updateContent(act: ChoicelyScreenActivity, data: Bundle) {
-        setArticle()
-        setSurvey()
-    }
-
-    private fun setSurvey() {
-        val bundle = Bundle().apply {
-            putString(ChoicelyIntentKeys.KEY, "SURVEY_KEY")
-        }
-        val surveyFragment = ChoicelySurveyFragment().apply {
-            arguments = bundle
-        }
-        replaceFragment(surveyContainer?.id ?: 0, surveyFragment, false)
-    }
-
-    private fun setArticle() {
-        val bundle = Bundle().apply {
-            putString(ChoicelyIntentKeys.ARTICLE_KEY, "ARTICLE_KEY")
-        }
-        val articleFragment = ChoicelyArticleFragment().apply {
-            arguments = bundle
-        }
-        replaceFragment(articleContainer?.id ?: 0, articleFragment, false)
-    }
-}
-```
-
-*The rest of the setup including content factory and registering the factory in the application class can follow the same approach in Java and Kotlin as outlined above.*

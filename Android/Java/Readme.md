@@ -97,7 +97,7 @@ implementation("com.choicely.sdk:android-core")
 >
 > Or create a new app using Choicely Builder: [How to create apps with Choicely](https://www.choicely.com/tutorials/how-to-create-apps-with-choicely-using-an-app-template)
 
-## 6. Create Application Class
+## 5. Create Application Class
 
 Create an `Application` class and initialize the Choicely SDK inside `onCreate()`. Then, set your application class in `AndroidManifest.xml`.
 

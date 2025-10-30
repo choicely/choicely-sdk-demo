@@ -22,10 +22,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.choicely.android.demo" />
+                  <option name="mobileSdkAppId" value="1:512354137719:android:f387329f8cc764f3773872" />
+                  <option name="projectId" value="sdk-demo-5f2fd" />
+                  <option name="projectNumber" value="512354137719" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

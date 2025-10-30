@@ -36,7 +36,6 @@ To access the Choicely SDK, add the Maven Central repository to your project.
 pluginManagement {
     repositories {
         ...
-        maven { url 'https://jitpack.io' }
         mavenCentral()
     }
 }
@@ -44,7 +43,6 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         ...
-        maven { url 'https://jitpack.io' }
         mavenCentral()
     }
 }
@@ -56,7 +54,6 @@ dependencyResolutionManagement {
 pluginManagement {
     repositories {
         ...
-        maven(url = "https://jitpack.io")
         mavenCentral()
     }
 }
@@ -64,7 +61,6 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         ...
-        maven(url = "https://jitpack.io")
         mavenCentral()
     }
 }
@@ -77,14 +73,14 @@ Add the following to your app-level `build.gradle` file inside the `dependencies
 **Java:**
 
 ```groovy
-implementation platform("com.choicely.sdk:bom:1.0.5")
+implementation platform("com.choicely.sdk:bom:1.1.0")
 implementation "com.choicely.sdk:android-core"
 ```
 
 **Kotlin:**
 
 ```groovy
-implementation(platform("com.choicely.sdk:bom:1.0.5"))
+implementation(platform("com.choicely.sdk:bom:1.1.0"))
 implementation("com.choicely.sdk:android-core")
 ```
 

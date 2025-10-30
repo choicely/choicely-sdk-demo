@@ -7,7 +7,7 @@ android {
     compileSdk 36
 
     defaultConfig {
-        applicationId "com.choicely.sdk.demo"
+        applicationId "com.choicely.android.demo"
         minSdk 24
         targetSdk 36
         versionCode 1
@@ -39,8 +39,7 @@ dependencies {
     implementation libs.navigation.fragment
     implementation libs.navigation.ui
 
-
     // Import the BOM
-    implementation(platform("com.choicely.sdk:bom:1.0.5"))
+    implementation(platform("com.choicely.sdk:bom:1.1.0"))
     implementation("com.choicely.sdk:android-core")
 }

@@ -1,11 +1,11 @@
 [versions]
 agp = "8.13.0"
-bom = "1.0.3"
+bom = "1.0.5"
 constraintlayout = "2.2.1"
-lifecycleLivedataKtx = "2.9.3"
-lifecycleViewmodelKtx = "2.9.3"
+lifecycleLivedataKtx = "2.9.4"
+lifecycleViewmodelKtx = "2.9.4"
 navigationFragment = "2.9.4"
-navigationUi = "2.9.4"
+navigationUi = "2.9.5"
 
 [libraries]
 

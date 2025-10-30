@@ -11,7 +11,7 @@ import ChoicelyCore
 class YourCustomViewControllerFactory: ChoicelyExternalViewControllerFactory {
     
     func createViewController(choicelyNavigationitem: ChoicelyNavigationItem?) -> ChoicelyController? {
-        let yourCustomUrl = "choicely://custom-screen"
+        let yourCustomUrl = "choicely://special/custom"
         let internalUrl = choicelyNavigationitem?.internalUrl
         
         if internalUrl?.contains(yourCustomUrl) == true {

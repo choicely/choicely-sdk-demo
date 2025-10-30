@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34D5D98B2E82BF7700E18DE8 /* ChoicelyCore in Frameworks */ = {isa = PBXBuildFile; productRef = 34D5D98A2E82BF7700E18DE8 /* ChoicelyCore */; };
+		34D1BC812E8C149E00E81165 /* ChoicelyCore in Frameworks */ = {isa = PBXBuildFile; productRef = 34D1BC802E8C149E00E81165 /* ChoicelyCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34D5D98B2E82BF7700E18DE8 /* ChoicelyCore in Frameworks */,
+				34D1BC812E8C149E00E81165 /* ChoicelyCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +70,7 @@
 			);
 			name = "sdk-ios-demo";
 			packageProductDependencies = (
-				34D5D98A2E82BF7700E18DE8 /* ChoicelyCore */,
+				34D1BC802E8C149E00E81165 /* ChoicelyCore */,
 			);
 			productName = "sdk-ios-demo";
 			productReference = 34D5D95B2E82BD1C00E18DE8 /* sdk-ios-demo.app */;
@@ -101,7 +101,7 @@
 			mainGroup = 34D5D9522E82BD1C00E18DE8;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				34D5D9892E82BF7700E18DE8 /* XCRemoteSwiftPackageReference "choicely-sdk-ios" */,
+				34D1BC7F2E8C149E00E81165 /* XCRemoteSwiftPackageReference "choicely-sdk-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 34D5D95C2E82BD1C00E18DE8 /* Products */;
@@ -335,20 +335,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		34D5D9892E82BF7700E18DE8 /* XCRemoteSwiftPackageReference "choicely-sdk-ios" */ = {
+		34D1BC7F2E8C149E00E81165 /* XCRemoteSwiftPackageReference "choicely-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/choicely/choicely-sdk-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.0;
+				minimumVersion = 1.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		34D5D98A2E82BF7700E18DE8 /* ChoicelyCore */ = {
+		34D1BC802E8C149E00E81165 /* ChoicelyCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 34D5D9892E82BF7700E18DE8 /* XCRemoteSwiftPackageReference "choicely-sdk-ios" */;
+			package = 34D1BC7F2E8C149E00E81165 /* XCRemoteSwiftPackageReference "choicely-sdk-ios" */;
 			productName = ChoicelyCore;
 		};
 /* End XCSwiftPackageProductDependency section */

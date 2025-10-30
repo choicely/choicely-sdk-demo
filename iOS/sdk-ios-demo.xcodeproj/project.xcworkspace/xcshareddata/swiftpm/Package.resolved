@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/choicely/choicely-sdk-ios",
       "state" : {
-        "revision" : "58d964ce999afad0c9b94a8a0ef85bc2fa3fafcb",
-        "version" : "0.9.0"
+        "revision" : "1405c14dc767d005fbc138cc8e07250ef58c2f1e",
+        "version" : "1.0.1"
       }
     },
     {

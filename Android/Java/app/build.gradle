@@ -7,7 +7,7 @@ android {
     compileSdk 36
 
     defaultConfig {
-        applicationId "com.choicely.android.demo"
+        applicationId "com.choicely.sdk.demo"
         minSdk 24
         targetSdk 36
         versionCode 1
